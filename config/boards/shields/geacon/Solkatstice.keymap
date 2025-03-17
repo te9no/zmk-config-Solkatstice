@@ -26,7 +26,7 @@
         mLCTL: mLCTL {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LCTL>;
+        bindings = <&kp LCT>;
         };
         mF13: mF13 {
         compatible = "zmk,behavior-macro";
@@ -166,7 +166,7 @@
         };
     }; 
  
-   keymap {
+    keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
