@@ -26,7 +26,7 @@
         mLCTL: mLCTL {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <&kp LCT>;
+        bindings = <&kp LCTL>;
         };
         mF13: mF13 {
         compatible = "zmk,behavior-macro";
