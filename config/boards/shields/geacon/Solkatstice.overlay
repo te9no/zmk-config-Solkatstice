@@ -1,0 +1,133 @@
+#include <dt-bindings/zmk/bt.h>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "geacon_pinctrl.dtsi"
+#include "geacon.dtsi"
+
+&adc {
+	status = "okay";
+};
+
+&spi0 {
+    status = "okay";
+    cs-gpios =  <&xiao_d 10 GPIO_ACTIVE_LOW>, <&xiao_d 9 GPIO_ACTIVE_LOW>;
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    compatible = "nordic,nrf-spim";
+
+    trackball: pd@0 {
+        status = "okay";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+  	    cpi = <600>;
+        spi-max-frequency = <1000000>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        irq-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+
+    shifter: mcp23sxx@1 {
+        status = "okay";
+        compatible = "microchip,mcp23sxx";
+        gpio-controller;
+        spi-max-frequency = <1000000>;
+        reg = <1>;
+        label = "MCP23S17";
+        #gpio-cells = <2>;
+        ngpios = <16>;
+        int-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-charlieplex";
+        interrupt-gpios = <&xiao_d 7 (GPIO_ACTIVE_LOW)>;
+        gpios
+            = <&shifter 0 (GPIO_ACTIVE_LOW)>
+            , <&shifter 1 (GPIO_ACTIVE_LOW)>
+            , <&shifter 2 (GPIO_ACTIVE_LOW)>
+            , <&shifter 3 (GPIO_ACTIVE_LOW)>
+            , <&shifter 4 (GPIO_ACTIVE_LOW)>
+            , <&shifter 5 (GPIO_ACTIVE_LOW)>
+            , <&shifter 6 (GPIO_ACTIVE_LOW)>
+            , <&shifter 7 (GPIO_ACTIVE_LOW)>
+            , <&shifter 8 (GPIO_ACTIVE_LOW)>
+            , <&shifter 9 (GPIO_ACTIVE_LOW)>
+            ;
+    };
+};
+
+&i2c1 {
+    status = "okay";
+    compatible = "nordic,nrf-twi";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
+    
+    clock-frequency = <100000>; 
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+};
+
+/ {
+  chosen {
+      zephyr,display = &oled;
+  };
+
+	anin0: analog_input_0 {
+      compatible = "zmk,analog-input";
+      sampling-hz = <100>;
+      x-ch {
+          io-channels = <&adc 0>;
+          mv-mid = <1630>;
+          mv-min-max = <1600>;
+          mv-deadzone = <10>;
+          scale-multiplier = <1>;
+          scale-divisor = <70>;
+          invert;
+          evt-type = <INPUT_EV_REL>;
+          input-code = <INPUT_REL_X>;
+      };
+      y-ch {
+          io-channels = <&adc 1>;
+          mv-mid = <1630>;
+          mv-min-max = <1600>;
+          mv-deadzone = <10>;
+          scale-multiplier = <3>;
+          scale-divisor = <4>;
+          invert;
+          evt-type = <INPUT_EV_REL>;
+          input-code = <INPUT_REL_Y>;
+
+          /* enable report mdoe for gamepad axix or knob */
+          /* to only call input_report on quantquantized value is updated */
+          report-on-change-only;
+      };
+	};
+
+  trackball_listener {
+    status = "okay";
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+    input-processors = <&zip_temp_layer 3 1000>;
+    scroll {
+      layers = <2>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
+    };
+  };
+};
