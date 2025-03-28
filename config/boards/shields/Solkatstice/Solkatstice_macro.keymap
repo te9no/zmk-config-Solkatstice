@@ -154,7 +154,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     }; 
-<<<<<<< HEAD:config/boards/shields/geacon/Solkatstice.keymap
  
     keymap {
         compatible = "zmk,keymap";
@@ -219,8 +218,6 @@
 >;
         };
     };
-=======
->>>>>>> 2c34e1d70d3c458ca8e475d7e5762828c5cf0982:config/boards/shields/Solkatstice/Solkatstice_macro.keymap
 };
 
 / {
