@@ -17,19 +17,19 @@
 
         default_layer {
             bindings = <
-&kp CAPS  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LCTL  &kp A  &mt LEFT_ALT S  &mt LEFT_WIN D  &mt LCTRL F  &kp G  &mt RCTRL H  &mt RIGHT_WIN J  &mt RIGHT_ALT K  &kp L  &kp ENTER  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp UP  &kp LGUI  &kp LALT  &lt 2 SPACE  &lt 2 SPACE 　&kp LEFT  &kp DOWN  &kp RIGHT
+&kp CAPS  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp TAB  &kp A  &mt LEFT_ALT S  &mt LEFT_WIN D  &mt LCTRL F  &kp G  &mt RCTRL H  &mt RIGHT_WIN J  &mt RIGHT_ALT K  &kp L  &kp ENTER  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp UP  &lt 2 LWIN  &kp LALT  &lt 1 SPACE  &lt 2 SPACE  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
         function_layer {
             bindings = <
-&kp ESC  &kp PG_UP  &kp UP  &kp PG_DN  &kp HOME  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp LCTL  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp LSHFT  &kp BKSP  &kp DEL  &trans  &trans  &trans  &kp F11  &kp F12  &trans  &trans  &trans  &kp LALT  &kp ENTER &kp ENTER  &trans  &trans  &trans  &trans
+&kp ESC  &kp PG_UP  &kp UP  &kp PG_DN  &kp HOME  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp ESCAPE  &kp BKSP  &kp DEL  &trans  &trans  &trans  &kp F11  &kp F12  &trans  &trans  &trans  &kp LALT  &kp ENTER  &kp ENTER  &trans  &trans  &trans  &trans
             >;
         };
 
         num_layer {
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LCTL  &kp TAB  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &lt 5 BSLH  &kp LSHFT  &kp ESC  &trans  &trans  &trans  &kp FSLH  &kp SEMI  &kp SQT  &kp LBKT  &kp RBKT  &trans  &kp LALT  &kp ENTER  &kp ENTER  &trans  &trans  &trans  &trans
+&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &lt 5 BSLH  &trans  &trans  &trans  &trans  &trans  &kp FSLH  &kp SEMI  &kp SQT  &kp LBKT  &kp RBKT  &trans  &kp LALT  &kp ENTER  &kp ENTER  &trans  &trans  &trans  &trans
             >;
         };
 
