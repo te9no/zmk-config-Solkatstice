@@ -1,5 +1,4 @@
 #include <behaviors/rgbled_widget.dtsi>
-#include "Solkatstice_macro.keymap"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
