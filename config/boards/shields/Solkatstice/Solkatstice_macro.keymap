@@ -1,3 +1,9 @@
+&mt {
+   flavor = "tap-preferred";
+   quick_tap_ms = <125>;
+   tapping_term_ms = <250>;
+};
+
 / {
     macros {
         mLCTL: mLCTL {
@@ -47,6 +53,7 @@
             rightup   { sequence = <F18 F17 F16>; bindings = <&kp END>; };
         };
     }; 
+}; 
  
 / {
     aliases {
