@@ -6,7 +6,7 @@
 #include "Solkatstice.dtsi"
 
 &adc {
-	status = "disabled";
+	status = "okay";
 };
 
 &spi0 {
