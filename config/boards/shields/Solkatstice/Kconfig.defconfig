@@ -10,8 +10,11 @@ if SHIELD_Solkatstice
       default y
   endif # ZMK_DISPLAY
 
+  config ZMK_SPLIT
+      default y
+
   config ZMK_SPLIT_ROLE_CENTRAL
-  default y
+      default y
 
   if LVGL
     config LV_Z_VDB_SIZE
