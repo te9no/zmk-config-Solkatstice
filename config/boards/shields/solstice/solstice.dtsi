@@ -54,7 +54,11 @@
           , <&key_physical_attrs 100 100 1200  325       0     0     0>
           ;
     };
-  
+    
+    kscan0: kscan {
+      compatible = "zmk,kscan-gpio-charlieplex";
+    };
+	
     default_transform: keymap_transform_0 {
       compatible = "zmk,matrix-transform";
       columns = <7>;
