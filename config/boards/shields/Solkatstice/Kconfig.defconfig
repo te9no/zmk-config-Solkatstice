@@ -1,4 +1,4 @@
 if SHIELD_SOLKATSTICE
   config ZMK_KEYBOARD_NAME
-  default "Solkatstice"
+    default "solkatstice"
 endif
