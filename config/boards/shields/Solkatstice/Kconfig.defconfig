@@ -1,6 +1,6 @@
 if SHIELD_SOLKATSTICE
   config ZMK_KEYBOARD_NAME
-  default "Solkatstice"
+    default "Solkatstice"
 
   if ZMK_DISPLAY
     config I2C
