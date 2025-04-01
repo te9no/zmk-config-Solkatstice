@@ -114,10 +114,7 @@
             >;
         };
     };
-};
 
-
-/ {
     aliases {
         led-red = &led0;
         led-green = &led1;
