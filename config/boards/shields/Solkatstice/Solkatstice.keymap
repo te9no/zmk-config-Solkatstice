@@ -10,12 +10,6 @@
 #define SCROLL 4
 #define BT 5
 
-&mt {
-   flavor = "tap-preferred";
-   quick_tap_ms = <125>;
-   tapping_term_ms = <250>;
-};
-
 / {
     macros {
         mLCTL: mLCTL {
