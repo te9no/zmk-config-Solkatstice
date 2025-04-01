@@ -8,6 +8,7 @@
 
   kat_physical_layout: kat_physical_layout {
       compatible = "zmk,physical-layout";
+      display-name = "Default";
       transform = <&default_transform>;
       kscan = <&kscan0>;
       keys  //                     w   h    x    y     rot    rx    ry
