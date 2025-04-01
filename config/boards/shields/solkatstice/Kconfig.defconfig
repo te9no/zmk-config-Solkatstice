@@ -1,6 +1,6 @@
-if SHIELD_SOLSTICE
+if SHIELD_SOLKATSTICE
     config ZMK_KEYBOARD_NAME
-        default "solstice"
+        default "solkatstice"
 
     config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -29,7 +29,7 @@ if SHIELD_SOLSTICE
     endif # LVGL
 endif
 
-if SHIELD_SOLSTICE
+if SHIELD_SOLKATSTICE
     config ZMK_SPLIT
         default y
 endif
