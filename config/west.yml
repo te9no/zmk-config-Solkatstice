@@ -20,17 +20,5 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
-    - name: zmk-pmw3610-driver
-      remote: badjeff
-      revision: main
-    - name: zmk-analog-input-driver
-      remote: badjeff
-      revision: main
-    - name: zmk-leader-key
-      remote: urob
-      revision: v0.2.1 # set to same as ZMK version above
-    - name: zmk-dongle-display
-      remote: te9no
-      revision: test
   self:
     path: config
