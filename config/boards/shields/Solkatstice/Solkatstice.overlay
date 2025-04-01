@@ -5,9 +5,6 @@
 #include "Solkatstice_pinctrl.dtsi"
 #include "Solkatstice.dtsi"
 
-&adc {
-	status = "okay";
-};
 
 &spi0 {
     status = "okay";
