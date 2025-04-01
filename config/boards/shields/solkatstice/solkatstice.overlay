@@ -141,7 +141,7 @@
   //     layers = <2>;
   //     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
   //   };
-  };
+  // };
   
   // sideband_behaviors {
   //   compatible = "zmk,kscan-sideband-behaviors";
