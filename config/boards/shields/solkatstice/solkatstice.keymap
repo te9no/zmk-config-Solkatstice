@@ -48,6 +48,17 @@
         };
     };
 
+    behaviors {
+        leader1: leader1 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            leftdown { sequence = <F13 F14 F15>; bindings = <&kp PG_UP>; };
+            leftup   { sequence = <F15 F14 F13>; bindings = <&kp PG_DN>; };
+            rightdown { sequence = <F16 F17 F18>; bindings = <&kp HOME>; };
+            rightup   { sequence = <F18 F17 F16>; bindings = <&kp END>; };
+        };
+    }; 
+    
     keymap {
         compatible = "zmk,keymap";
 
