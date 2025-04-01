@@ -1,0 +1,120 @@
+#include <dt-bindings/zmk/bt.h>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "solstice_pinctrl.dtsi"
+#include "solstice.dtsi"
+#include <behaviors/rgbled_widget.dtsi>
+
+&adc {
+	status = "okay";
+};
+
+/ {
+  chosen {
+      zephyr,display = &oled;
+  };
+  
+  aliases {
+      led-red = &led0;
+      led-green = &led1;
+      led-blue = &led2;
+  };
+
+  leds {
+      compatible = "gpio-leds";
+      status = "okay";
+      led0: led_0 {
+          gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;  // red LED, connected to P0.26
+      };
+      led1: led_1 {
+          gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;  // green LED, connected to P0.30
+      };
+      led2: led_2 {
+          gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;  // blue LED, connected to P0.06
+      };
+  };
+
+	anin0: analog_input_0 {
+      compatible = "zmk,analog-input";
+      sampling-hz = <100>;
+      x-ch {
+          io-channels = <&adc 2>;
+          mv-mid = <1630>;
+          mv-min-max = <1600>;
+          mv-deadzone = <10>;
+          scale-multiplier = <1>;
+          scale-divisor = <70>;
+          invert;
+          evt-type = <INPUT_EV_REL>;
+          input-code = <INPUT_REL_X>;
+          report-on-change-only;
+      };
+      y-ch {
+          io-channels = <&adc 3>;
+          mv-mid = <1630>;
+          mv-min-max = <1600>;
+          mv-deadzone = <10>;
+          scale-multiplier = <1>;
+          scale-divisor = <70>;
+          invert;
+          evt-type = <INPUT_EV_REL>;
+          input-code = <INPUT_REL_Y>;
+
+          /* enable report mdoe for gamepad axix or knob */
+          /* to only call input_report on quantquantized value is updated */
+          report-on-change-only;
+      };
+	};
+    
+    analog_input_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+        device = <&anin0>;
+    //    input-processors = <&zip_temp_layer 3 1000>;
+    //    scroll {
+    //        layers = <2>;
+    //        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
+    //    };
+    };
+}; 
+
+&kscan0 {
+    compatible = "zmk,kscan-gpio-charlieplex";
+    interrupt-gpios = <&xiao_d 1 (GPIO_ACTIVE_LOW)>;
+    gpios
+        = <&xiao_d 6 (GPIO_ACTIVE_LOW)>
+        , <&xiao_d 7 (GPIO_ACTIVE_LOW)>
+        , <&xiao_d 0 (GPIO_ACTIVE_LOW)>
+        , <&xiao_d 1 (GPIO_ACTIVE_LOW)>
+        , <&xiao_d 10 (GPIO_ACTIVE_LOW)>
+        , <&gpio0 9 GPIO_ACTIVE_LOW>
+        , <&gpio0 10 GPIO_ACTIVE_LOW>
+        ;
+};
+
+&xiao_i2c {
+    status = "okay";
+    compatible = "nordic,nrf-twi";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+    
+    clock-frequency = <100000>; 
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+};
+  
