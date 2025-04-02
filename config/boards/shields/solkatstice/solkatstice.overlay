@@ -48,7 +48,6 @@
             invert;
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_X>;
-            report-on-change-only;
         };
         y-ch {
             io-channels = <&adc 1>;
@@ -60,7 +59,6 @@
             invert;
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_Y>;
-            report-on-change-only;
         };
     };
     
@@ -68,11 +66,7 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&anin0>;
-        //input-processors = <&zip_temp_layer 3 1000>;
-        scroll {
-            layers = <0>;
-            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
-        };
+        input-processors = <&zip_temp_layer 3 1000>;
     };
 
     trackball_listener {
@@ -98,7 +92,7 @@
         , <&shifter 13 GPIO_ACTIVE_LOW>
         ;
     };
-    
+
     sideband_behaviors {
         compatible = "zmk,kscan-sideband-behaviors";
         auto-enable;
