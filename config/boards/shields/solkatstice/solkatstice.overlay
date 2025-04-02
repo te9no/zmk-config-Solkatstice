@@ -173,6 +173,12 @@
             , <&shifter 5 (GPIO_ACTIVE_LOW)>
             , <&shifter 6 (GPIO_ACTIVE_LOW)>
             , <&shifter 7 (GPIO_ACTIVE_LOW)>
+            , <&shifter 8 GPIO_ACTIVE_LOW>
+            , <&shifter 9 GPIO_ACTIVE_LOW>
+            , <&shifter 10 GPIO_ACTIVE_LOW>
+            , <&shifter 11 GPIO_ACTIVE_LOW>
+            , <&shifter 12 GPIO_ACTIVE_LOW>
+            , <&shifter 13 GPIO_ACTIVE_LOW>
             ;
     };
 };
