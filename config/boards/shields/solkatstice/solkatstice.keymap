@@ -67,7 +67,7 @@
         leader2: leader2 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            leftup   { sequence = <F15 F14 F13>; bindings = <&kp PG_UP>; };
+            leftup   { sequence = <F15 F14 leader1 F13>; bindings = <&kp PG_UP>; };
         };
         leader3: leader3 {
             compatible = "zmk,behavior-leader-key";
