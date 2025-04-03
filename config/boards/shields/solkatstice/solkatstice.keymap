@@ -30,8 +30,9 @@
         mF15: mF15 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&leader2>
-                     , <&macro_tap &kp F15>;
+            // bindings = <&leader2>
+            //          , <&macro_tap &kp F15>;
+            bindings = <&macro_tap &kp F15>;
         };
         mF16: mF16 {
             compatible = "zmk,behavior-macro";
