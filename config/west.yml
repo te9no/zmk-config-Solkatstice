@@ -6,14 +6,18 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: badjeff
       url-base: https://github.com/badjeff
-    - name: urob
-      url-base: https://github.com/urob
     - name: te9no
       url-base: https://github.com/te9no
+    - name: urob
+      url-base: https://github.com/urob
   projects:
+    # - name: zmk
+    #   remote: zmkfirmware
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: urob
+      revision: v0.2+fix-child-nodes
       import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
@@ -30,5 +34,8 @@ manifest:
     - name: zmk-dongle-display
       remote: te9no
       revision: test
+    # - name: zmk-nice-oled
+    #   remote: te9no
+    #   revision: main
   self:
     path: config
