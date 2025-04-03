@@ -46,6 +46,11 @@
             #binding-cells = <0>;
             bindings = <&kp F18>;
         };
+        mESC: mESC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>;
+        };
     };
 
     behaviors {
@@ -56,9 +61,10 @@
             leftup   { sequence = <F15 F14 F13>; bindings = <&kp PG_DN>; };
             rightdown { sequence = <F16 F17 F18>; bindings = <&kp HOME>; };
             rightup   { sequence = <F18 F17 F16>; bindings = <&kp END>; };
+            ESC   { sequence = <E S C>; bindings = <&mESC>; };
         };
     }; 
-    
+
     keymap {
         compatible = "zmk,keymap";
 
