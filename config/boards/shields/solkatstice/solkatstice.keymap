@@ -36,8 +36,8 @@
         mF16: mF16 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&leader3>
-                     , <&macro_tap &kp F16>;
+            bindings = <&macro_tap &kp F16>
+                    , <&leader3>;
         };
         mF17: mF17 {
             compatible = "zmk,behavior-macro";
@@ -47,8 +47,8 @@
         mF18: mF18 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&leader4>
-                     , <&macro_tap &kp F18>;
+            bindings = <&macro_tap &kp F18>
+                    , <&leader4>;
         };
         mESC: mESC {
             compatible = "zmk,behavior-macro";
@@ -71,12 +71,12 @@
         leader3: leader3 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            rightdown { sequence = <F16 F17 F18>; bindings = <&kp END>; };
+            rightdown { sequence = <F17 F18>; bindings = <&kp END>; };
         };
         leader4: leader4 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            rightup   { sequence = <F18 F17 F16>; bindings = <&kp HOME>; };
+            rightup   { sequence = <F17 F16>; bindings = <&kp HOME>; };
         };
     }; 
 
