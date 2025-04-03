@@ -14,42 +14,42 @@
         mLCTL: mLCTL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap LCTL>;
+            bindings = <&macro_tap &kp LCTL>;
         };
         mF13: mF13 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap F13>;
+            bindings = <&macro_tap &kp F13>;
         };
         mF14: mF14 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap F14>;
+            bindings = <&macro_tap &kp F14>;
         };
         mF15: mF15 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap F15>;
+            bindings = <&macro_tap &kp F15>;
         };
         mF16: mF16 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap F16>;
+            bindings = <&macro_tap &kp F16>;
         };
         mF17: mF17 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap F17>;
+            bindings = <&macro_tap &kp F17>;
         };
         mF18: mF18 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap F18>;
+            bindings = <&macro_tap &kp F18>;
         };
         mESC: mESC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap ESC>;
+            bindings = <&macro_tap &kp ESC>;
         };
     };
 
@@ -61,7 +61,7 @@
             leftup   { sequence = <F15 F14 F13>; bindings = <&kp PG_DN>; };
             rightdown { sequence = <F16 F17 F18>; bindings = <&kp HOME>; };
             rightup   { sequence = <F18 F17 F16>; bindings = <&kp END>; };
-            esc   { sequence = <E S C>; bindings = <&mESC>; };
+            lESC   { sequence = <E S C>; bindings = <&mESC>; };
         };
     }; 
 
