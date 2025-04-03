@@ -37,7 +37,7 @@
 
     anin0: analog_input_0 {
         compatible = "zmk,analog-input";
-        sampling-hz = <200>;
+        sampling-hz = <100>;
         y-ch {
             io-channels = <&adc 0>;
             mv-mid = <1300>;
