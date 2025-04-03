@@ -37,7 +37,7 @@
 
     anin0: analog_input_0 {
         compatible = "zmk,analog-input";
-        sampling-hz = <20>;
+        sampling-hz = <100>;
         y-ch {
             io-channels = <&adc 0>;
             mv-mid = <1300>;
@@ -79,54 +79,6 @@
             input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
         };
     };
-  
-    // kscan1: kscan1 {
-    //     compatible = "zmk,kscan-gpio-direct";
-    //     input-gpios
-    //     = <&shifter 14 (GPIO_ACTIVE_LOW)>
-    //     , <&shifter 8 (GPIO_ACTIVE_LOW)>
-    //     , <&shifter 9 (GPIO_ACTIVE_LOW)>
-    //     , <&shifter 10 (GPIO_ACTIVE_LOW)>
-    //     , <&shifter 11 (GPIO_ACTIVE_LOW)>
-    //     , <&shifter 12 (GPIO_ACTIVE_LOW)>
-    //     , <&shifter 13 (GPIO_ACTIVE_LOW)>
-    //     ;
-    // };
-
-    sideband_behaviors {
-        compatible = "zmk,kscan-sideband-behaviors";
-        auto-enable;
-        kscan = <&kscan0>;
-
-        ain0: ain0 {
-            column = <8>;
-            bindings = <&mLCTL>;
-        };
-        key1: key1 {
-            column = <9>;
-            bindings = <&mF13>;
-        };
-        key2: key2 {
-            column = <10>;
-            bindings = <&mF14>;
-        };
-        key3: key3 {
-            column = <11>;
-            bindings = <&mF15>;
-        };
-        key4: key4 {
-            column = <12>;
-            bindings = <&mF16>;
-        };
-        key5: key5 {
-            column = <13>;
-            bindings = <&mF17>;
-        };
-        key6: key6 {
-            column = <14>;
-            bindings = <&mF18>;
-        };
-    }; 
 }; 
 
 &spi0 {
@@ -174,6 +126,19 @@
             , <&shifter 6 (GPIO_ACTIVE_LOW)>
             , <&shifter 7 (GPIO_ACTIVE_LOW)>
             , <&shifter 14 (GPIO_ACTIVE_LOW)>
+            , <&shifter 8 (GPIO_ACTIVE_LOW)>
+            , <&shifter 9 (GPIO_ACTIVE_LOW)>
+            , <&shifter 10 (GPIO_ACTIVE_LOW)>
+            , <&shifter 11 (GPIO_ACTIVE_LOW)>
+            , <&shifter 12 (GPIO_ACTIVE_LOW)>
+            , <&shifter 13 (GPIO_ACTIVE_LOW)>
+            ;
+    };
+    
+    kscan1: kscan1 {
+        compatible = "zmk,kscan-gpio-direct";
+        input-gpios
+            = <&shifter 14 (GPIO_ACTIVE_LOW)>
             , <&shifter 8 (GPIO_ACTIVE_LOW)>
             , <&shifter 9 (GPIO_ACTIVE_LOW)>
             , <&shifter 10 (GPIO_ACTIVE_LOW)>
