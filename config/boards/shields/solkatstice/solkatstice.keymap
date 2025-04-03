@@ -14,42 +14,42 @@
         mLCTL: mLCTL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTL>;
+            bindings = <&macro_tap LCTL>;
         };
         mF13: mF13 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F13>;
+            bindings = <&macro_tap F13>;
         };
         mF14: mF14 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F14>;
+            bindings = <&macro_tap F14>;
         };
         mF15: mF15 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F15>;
+            bindings = <&macro_tap F15>;
         };
         mF16: mF16 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F16>;
+            bindings = <&macro_tap F16>;
         };
         mF17: mF17 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F17>;
+            bindings = <&macro_tap F17>;
         };
         mF18: mF18 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F18>;
+            bindings = <&macro_tap F18>;
         };
         mESC: mESC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESC>;
+            bindings = <&macro_tap ESC>;
         };
     };
 
