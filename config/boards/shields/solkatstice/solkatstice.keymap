@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define FUNCTION 1
 #define NUM 2
@@ -62,6 +63,7 @@
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
             leftdown { sequence = <F14 F15>; bindings = <&kp PG_DN>; };
+            out { sequence = <O U T>; bindings = <&out OUT_TOG>; };
         };
         leader2: leader2 {
             compatible = "zmk,behavior-leader-key";

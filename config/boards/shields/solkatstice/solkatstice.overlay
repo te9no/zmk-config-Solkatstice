@@ -37,12 +37,12 @@
 
     anin0: analog_input_0 {
         compatible = "zmk,analog-input";
-        sampling-hz = <100>;
+        sampling-hz = <200>;
         x-ch {
             io-channels = <&adc 1>;
             mv-mid = <1300>;
             mv-min-max = <1600>;
-            mv-deadzone = <100>;
+            mv-deadzone = <200>;
             scale-multiplier = <1>;
             scale-divisor = <70>;
             #invert;
@@ -53,7 +53,7 @@
             io-channels = <&adc 0>;
             mv-mid = <1300>;
             mv-min-max = <1600>;
-            mv-deadzone = <100>;
+            mv-deadzone = <200>;
             scale-multiplier = <1>;
             scale-divisor = <70>;
             invert;
