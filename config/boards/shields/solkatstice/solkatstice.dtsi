@@ -1,105 +1,90 @@
-#include <dt-bindings/zmk/matrix_transform.h>
-#include <physical_layouts.dtsi>
-
-/ {
-  chosen {
-    zmk,physical-layout = &kat_physical_layout;
-  };
-
-  kat_physical_layout: kat_physical_layout {
-      compatible = "zmk,physical-layout";
-      display-name = "Default";
-      transform = <&default_transform>;
-      kscan = <&kscan0>;
-      keys  //                     w   h    x    y     rot    rx    ry
-          = <&key_physical_attrs 100 100    0    0       0     0     0>
-          , <&key_physical_attrs 100 100  100    0       0     0     0>
-          , <&key_physical_attrs 100 100  200    0       0     0     0>
-          , <&key_physical_attrs 100 100  300    0       0     0     0>
-          , <&key_physical_attrs 100 100  400    0       0     0     0>
-          , <&key_physical_attrs 100 100  500    0       0     0     0>
-          , <&key_physical_attrs 100 100  600    0       0     0     0>
-          , <&key_physical_attrs 100 100  700    0       0     0     0>
-          , <&key_physical_attrs 100 100  800    0       0     0     0>
-          , <&key_physical_attrs 100 100  900    0       0     0     0>
-          , <&key_physical_attrs 125 100 1000    0       0     0     0>
-          , <&key_physical_attrs 125 100    0  100       0     0     0>
-          , <&key_physical_attrs 100 100  125  100       0     0     0>
-          , <&key_physical_attrs 100 100  225  100       0     0     0>
-          , <&key_physical_attrs 100 100  325  100       0     0     0>
-          , <&key_physical_attrs 100 100  425  100       0     0     0>
-          , <&key_physical_attrs 100 100  525  100       0     0     0>
-          , <&key_physical_attrs 100 100  625  100       0     0     0>
-          , <&key_physical_attrs 100 100  725  100       0     0     0>
-          , <&key_physical_attrs 100 100  825  100       0     0     0>
-          , <&key_physical_attrs 100 100  925  100       0     0     0>
-          , <&key_physical_attrs 100 100 1025  100       0     0     0>
-          , <&key_physical_attrs 175 100    0  200       0     0     0>
-          , <&key_physical_attrs 100 100  175  200       0     0     0>
-          , <&key_physical_attrs 100 100  275  200       0     0     0>
-          , <&key_physical_attrs 100 100  375  200       0     0     0>
-          , <&key_physical_attrs 100 100  475  200       0     0     0>
-          , <&key_physical_attrs 100 100  575  200       0     0     0>
-          , <&key_physical_attrs 100 100  675  200       0     0     0>
-          , <&key_physical_attrs 100 100  775  200       0     0     0>
-          , <&key_physical_attrs 100 100  875  200       0     0     0>
-          , <&key_physical_attrs 100 100  975  200       0     0     0>
-          , <&key_physical_attrs 100 100 1100  225       0     0     0>
-          , <&key_physical_attrs 125 100  125  325       0     0     0>
-          , <&key_physical_attrs 125 100  250  325       0     0     0>
-          , <&key_physical_attrs 125 100  400  325       0     0     0>
-          , <&key_physical_attrs 125 100  525  325       0     0     0>
-          , <&key_physical_attrs 100 100 1000  325       0     0     0>
-          , <&key_physical_attrs 100 100 1100  325       0     0     0>
-          , <&key_physical_attrs 100 100 1200  325       0     0     0>
-          ;
-    };
-    
-    default_transform: keymap_transform_0 {
-      compatible = "zmk,matrix-transform";
-      columns = <7>;
-      rows = <7>;
-
-      map = <
-        RC(0,7)   RC(1,7)   RC(2,7)   RC(3,7)   RC(4,7)   RC(5,7)   RC(6,7)   RC(0,6)   RC(1,6)   RC(2,6)   RC(3,6)
-        RC(0,5)   RC(1,5)   RC(2,5)   RC(3,5)   RC(4,5)   RC(6,5)   RC(7,5)   RC(0,4)   RC(1,4)   RC(2,4)   RC(3,4)
-        RC(0,3)   RC(1,3)   RC(2,3)   RC(4,3)   RC(5,3)   RC(6,3)   RC(7,3)   RC(0,2)   RC(1,2)   RC(3,2)   RC(4,2)   
-        RC(0,1)   RC(2,1)             RC(3,1)   RC(4,1)                                           RC(5,1)   RC(6,1)   RC(7,1) 
-        >;
-    };
-    
-    sideband_behaviors {
-        compatible = "zmk,kscan-sideband-behaviors";
-        auto-enable;
-        kscan = <&kscan1>;
-
-        ain0: ain0 {
-            column = <0>;
-            bindings = <&mLCTL>;
-        };
-        key1: key1 {
-            column = <1>;
-            bindings = <&mF13>;
-        };
-        key2: key2 {
-            column = <2>;
-            bindings = <&mF14>;
-        };
-        key3: key3 {
-            column = <3>;
-            bindings = <&mF15>;
-        };
-        key4: key4 {
-            column = <4>;
-            bindings = <&mF16>;
-        };
-        key5: key5 {
-            column = <5>;
-            bindings = <&mF17>;
-        };
-        key6: key6 {
-            column = <6>;
-            bindings = <&mF18>;
-        };
-    }; 
+&adc {
+	status = "okay";
 };
+
+&spi0 {
+    status = "okay";
+    cs-gpios =  <&xiao_d 9 GPIO_ACTIVE_LOW>, <&xiao_d 10 GPIO_ACTIVE_LOW>;
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    compatible = "nordic,nrf-spim";
+
+    trackball: pd@0 {
+        status = "okay";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+  	    cpi = <600>;
+        spi-max-frequency = <1000000>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        irq-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+
+    shifter: mcp23sxx@1 {
+        status = "okay";
+        compatible = "microchip,mcp23sxx";
+        gpio-controller;
+        spi-max-frequency = <1000000>;
+        reg = <1>;
+        label = "MCP23S17";
+        #gpio-cells = <2>;
+        ngpios = <16>;
+        int-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-charlieplex";
+        interrupt-gpios = <&xiao_d 7 (GPIO_ACTIVE_LOW)>;
+        gpios
+            = <&shifter 0 (GPIO_ACTIVE_LOW)>
+            , <&shifter 1 (GPIO_ACTIVE_LOW)>
+            , <&shifter 2 (GPIO_ACTIVE_LOW)>
+            , <&shifter 3 (GPIO_ACTIVE_LOW)>
+            , <&shifter 4 (GPIO_ACTIVE_LOW)>
+            , <&shifter 5 (GPIO_ACTIVE_LOW)>
+            , <&shifter 6 (GPIO_ACTIVE_LOW)>
+            , <&shifter 7 (GPIO_ACTIVE_LOW)>
+            ;
+    };
+    
+    kscan1: kscan1 {
+        compatible = "zmk,kscan-gpio-direct";
+        input-gpios
+            = <&shifter 14 (GPIO_ACTIVE_LOW)>
+            , <&shifter 8 (GPIO_ACTIVE_LOW)>
+            , <&shifter 9 (GPIO_ACTIVE_LOW)>
+            , <&shifter 10 (GPIO_ACTIVE_LOW)>
+            , <&shifter 11 (GPIO_ACTIVE_LOW)>
+            , <&shifter 12 (GPIO_ACTIVE_LOW)>
+            , <&shifter 13 (GPIO_ACTIVE_LOW)>
+            ;
+    };
+};
+
+&i2c1  {
+    status = "okay";
+    compatible = "nordic,nrf-twi";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
+    
+    clock-frequency = <100000>; 
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+};
+  
