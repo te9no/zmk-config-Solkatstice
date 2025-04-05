@@ -11,6 +11,10 @@
 #define SCROLL 4
 #define BT 5
 
+&mt {
+    tapping-term-ms = <300>; // This is the value already set by default
+};
+
 / {
   chosen {
     zmk,physical-layout = &kat_physical_layout;
