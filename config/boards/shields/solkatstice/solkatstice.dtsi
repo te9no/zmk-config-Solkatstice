@@ -15,7 +15,7 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
   	    cpi = <600>;
-        spi-max-frequency = <100000>;
+        spi-max-frequency = <500000>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -26,7 +26,7 @@
         status = "okay";
         compatible = "microchip,mcp23sxx";
         gpio-controller;
-        spi-max-frequency = <1900000>;
+        spi-max-frequency = <1500000>;
         reg = <1>;
         label = "MCP23S17";
         #gpio-cells = <2>;
