@@ -3,7 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: te9no/zmk-actions/.github/workflows/build-user-config.yml
+    uses: te9no/zmk-actions/.github/workflows/build-user-config.yml@v1
     with:
       # Optionally choose the toolchain to use: Zephyr SDK (default) or GNU Arm
       # Embedded ('gnuarmemb'). The latter results in slightly faster builds.
