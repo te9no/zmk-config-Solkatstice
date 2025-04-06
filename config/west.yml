@@ -31,11 +31,11 @@ manifest:
     - name: zmk-leader-key
       remote: urob
       revision: v0.2.1 # set to same as ZMK version above
-    - name: zmk-dongle-display
-      remote: te9no
-      revision: test
-    # - name: zmk-nice-oled
+    # - name: zmk-dongle-display
     #   remote: te9no
-    #   revision: main
+    #   revision: test
+    - name: zmk-nice-oled
+      remote: te9no
+      revision: main
   self:
     path: config
