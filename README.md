@@ -7,12 +7,11 @@
 [Keyball Trackball Case (Test) by kepeo - Thingiverse](https://www.thingiverse.com/thing:6749719)  
 トラックボール基板はkumaさんの設計したデータを利用させていただきました。  
 [GitHub - kumamuk-git/roBa](https://github.com/kumamuk-git/roBa)  
-いずれも利用にあたり快諾してくださり、大変感謝しております。ありがとうございます！
 
 ## 特徴
 ・ZMKによる無線接続対応  
 ・40%Qazikat風配列  
-・OLED、トラックボール、ジョイスティック搭載  
+・OLED、トラックボール、アナログスティック、タッチスライダー搭載  
 
 ## 販売
 たぶん[booth](https://te9no.booth.pm/)で販売  
@@ -22,7 +21,6 @@
 
 ## ファームウェア
 [Github](https://github.com/te9no/zmk-config-Solkatstice)  
-
 ## 注意事項
 リポバッテリーを不適切に取り扱うと発火等の危険性があります。  
 接続時の極性の向きや、リード線の短絡、組み立てには十分ご注意下さい。  
