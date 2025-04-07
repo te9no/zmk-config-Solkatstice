@@ -73,7 +73,7 @@
         mLCTL: mLCTL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LCTL>;
+            bindings = <&macro_tap &kp LCTRL>;
         };
         mF13: mF13 {
             compatible = "zmk,behavior-macro";
