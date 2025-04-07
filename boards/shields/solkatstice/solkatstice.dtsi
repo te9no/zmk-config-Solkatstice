@@ -15,7 +15,7 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
   	    cpi = <600>;
-        spi-max-frequency = <500000>;
+        spi-max-frequency = <1000000>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -26,7 +26,7 @@
         status = "okay";
         compatible = "microchip,mcp23sxx";
         gpio-controller;
-        spi-max-frequency = <1500000>;
+        spi-max-frequency = <1000000>;
         reg = <1>;
         label = "MCP23S17";
         #gpio-cells = <2>;
@@ -52,7 +52,7 @@
     kscan1: kscan1 {
         compatible = "zmk,kscan-gpio-direct";
         input-gpios
-            = <&shifter 14 (GPIO_ACTIVE_HIGH)>
+            = <&shifter 14 (GPIO_ACTIVE_LOW)>
             , <&shifter 8 (GPIO_ACTIVE_LOW)>
             , <&shifter 9 (GPIO_ACTIVE_LOW)>
             , <&shifter 10 (GPIO_ACTIVE_LOW)>
