@@ -144,6 +144,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            label="Default";
             bindings = <
 &kp CAPS         &kp Q            &kp W            &kp E            &kp R            &kp T            &kp Y            &kp U            &kp I            &kp O             &kp P  
 &kp TAB          &kp A            &mt LEFT_ALT S   &mt LEFT_WIN D   &mt LCTRL F      &kp G            &kp H            &mt RCTRL J      &mt RIGHT_WIN K  &mt RIGHT_ALT L   &lt 5 BSLH  
@@ -153,6 +154,7 @@
         };
 
         function_layer {
+            label="Function";
             bindings = <
 &kp GRAVE        &kp PG_UP        &kp UP           &kp PG_DN        &kp HOME         &trans           &kp F1           &kp F2           &kp F3           &kp F4            &kp F5  
 &trans           &kp LEFT         &kp DOWN         &kp RIGHT        &kp END          &trans           &kp F6           &kp F7           &kp F8           &kp F9            &kp F10  
@@ -162,6 +164,7 @@
         };
 
         num_layer {
+            label="Number";
             bindings = <
 &kp ESC           &kp N1          &kp N2           &kp N3           &kp N4           &kp N5           &kp N6           &kp N7           &kp N8           &kp N9            &kp N0  
 &trans            &trans          &trans           &trans           &trans           &trans           &kp MINUS        &kp EQUAL        &kp LBKT         &kp RBKT          &kp BSLH  
@@ -171,6 +174,7 @@
         };
 
         mouse_layer {
+            label="Mouse";
             bindings = <
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans            &trans  
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans            &trans  
@@ -180,6 +184,7 @@
         };
 
         scroll_layer {
+            label="Scroll";
             bindings = <
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans            &trans  
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans            &trans  
@@ -189,6 +194,7 @@
         };
 
         bt_layer {
+            label="BT";
             bindings = <
 &trans           &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans           &trans           &trans           &trans           &trans  
 &trans           &bt BT_CLR       &bt BT_CLR_ALL   &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans  
