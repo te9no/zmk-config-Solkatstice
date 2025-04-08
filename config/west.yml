@@ -40,7 +40,7 @@ manifest:
     #   remote: te9no
     #   revision: main
     - name: zmk-dongle-display-view
-      remote: mctechnology17
+      remote: te9no
       revision: main
   self:
     path: config
