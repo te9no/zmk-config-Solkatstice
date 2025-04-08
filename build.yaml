@@ -2,7 +2,8 @@
 include:
   - board: seeeduino_xiao_ble
     # shield: solkatstice rgbled_adapter dongle_display
-    shield: solkatstice rgbled_adapter nice_oled
+    # shield: solkatstice rgbled_adapter nice_oled
+    shield: solkatstice rgbled_adapter dongle_display_view_seeeduino_xiao_ble
     snippet: zmk-usb-logging studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   # - board: seeeduino_xiao_ble
