@@ -3,7 +3,7 @@ on: [workflow_dispatch]
 
 jobs:
   build:
-    uses: te9no/zmk-actions/.github/workflows/build-user-config.yml@v4
+    uses: urob/zmk-actions/.github/workflows/build-user-config.yml@v4
     with:
       # Optionally choose the toolchain to use: Zephyr SDK (default) or GNU Arm
       # Embedded ('gnuarmemb'). The latter results in slightly faster builds.
