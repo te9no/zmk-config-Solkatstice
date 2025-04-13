@@ -13,14 +13,15 @@ manifest:
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
     - name: zmk
-      remote: urob
-      revision: v0.2+fix-child-nodes
-      import: app/west.yml
+      remote: zmkfirmware
+    #  revision: main
+      revision: v0.2.1
+    #   import: app/west.yml
+    #- name: zmk
+    #  remote: urob
+    #  revision: v0.2+fix-child-nodes
+    #  import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
