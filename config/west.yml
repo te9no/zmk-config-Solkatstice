@@ -17,7 +17,7 @@ manifest:
       remote: zmkfirmware
     #  revision: main
       revision: v0.2.1
-    #   import: app/west.yml
+      import: app/west.yml
     #- name: zmk
     #  remote: urob
     #  revision: v0.2+fix-child-nodes
