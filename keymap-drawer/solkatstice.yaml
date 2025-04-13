@@ -1,0 +1,330 @@
+layout: {zmk_keyboard: solkatstice, layout_name: solkatstice_physical_layout}
+layers:
+  Def:
+  - CAPS
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: TAB, h: JIS}
+  - A
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LEFT WIN}
+  - {t: F, h: LCTRL}
+  - G
+  - H
+  - {t: J, h: RCTRL}
+  - {t: K, h: RIGHT WIN}
+  - {t: L, h: RIGHT ALT}
+  - {t: \, h: BT}
+  - {t: SPACE, h: LSHFT}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - UP
+  - {t: LWIN, h: Num}
+  - LALT
+  - {t: SPACE, h: Func}
+  - {t: SPACE, h: Num}
+  - LEFT
+  - DOWN
+  - RIGHT
+  JIS:
+  - CAPS
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: TAB, h: JIS}
+  - A
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LEFT WIN}
+  - {t: F, h: LCTRL}
+  - G
+  - H
+  - {t: J, h: RCTRL}
+  - {t: K, h: RIGHT WIN}
+  - {t: L, h: RIGHT ALT}
+  - {t: \, h: BT}
+  - {t: SPACE, h: LSHFT}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - UP
+  - {t: LWIN, h: NumJIS}
+  - LALT
+  - {t: SPACE, h: Func}
+  - {t: SPACE, h: NumJIS}
+  - LEFT
+  - DOWN
+  - RIGHT
+  Func:
+  - '`'
+  - PG UP
+  - UP
+  - PG DN
+  - HOME
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: 笆ｽ, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT
+  - END
+  - {t: 笆ｽ, type: trans}
+  - F6
+  - {t: F7, h: RCTRL}
+  - {t: F8, h: RIGHT WIN}
+  - {t: F9, h: RIGHT ALT}
+  - F10
+  - {t: SPACE, h: LSHFT}
+  - BACKSPACE
+  - DEL
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - F11
+  - F12
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - ENTER
+  - {t: ENTER, type: held}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  Num:
+  - ESC
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - '-'
+  - '='
+  - '['
+  - ']'
+  - \
+  - {t: SPACE, h: LSHFT}
+  - BACKSPACE
+  - DEL
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - /
+  - ;
+  - ''''
+  - {t: 笆ｽ, type: trans}
+  - {type: held}
+  - ENTER
+  - ENTER
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  NumJIS:
+  - ESC
+  - '1'
+  - {t: '2', s: '['}
+  - '3'
+  - '4'
+  - '5'
+  - {t: '6', s: '='}
+  - {t: '7', s: Sft+6}
+  - {t: '8', s: Sft+'}
+  - {t: '9', s: Sft+8}
+  - {t: '0', s: Sft+9}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: '-', s: Sft+INT RO}
+  - {t: Sft+-, s: ':'}
+  - {t: ']', s: 'Sft+}'}
+  - {t: \, s: Sft+\}
+  - INT3
+  - ESCAPE
+  - BACKSPACE
+  - DEL
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - /
+  - {t: ;, s: ''''}
+  - {t: Sft+7, s: Sft+2}
+  - {t: 笆ｽ, type: trans}
+  - {type: held}
+  - ENTER
+  - ENTER
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  Mouse:
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - '&mkp MB2'
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  Scroll:
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - '&mkp MB2'
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  BT:
+  - {t: 笆ｽ, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - BT CLR
+  - BT CLR ALL
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {type: held}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
+  - {t: 笆ｽ, type: trans}
