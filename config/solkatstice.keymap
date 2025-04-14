@@ -75,6 +75,15 @@
           ;
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
+
     macros {
         mLCTL: mLCTL {
             compatible = "zmk,behavior-macro";
@@ -123,27 +132,6 @@
     };
 
     behaviors {
-        leader1: leader1 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-            leftdown { sequence = <F14 F15>; bindings = <&kp PG_DN>; };
-            out { sequence = <O U T>; bindings = <&out OUT_TOG>; };
-        };
-        leader2: leader2 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-            leftup   { sequence = <F14 F13>; bindings = <&kp PG_UP>; };
-        };
-        leader3: leader3 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-            rightdown { sequence = <F17 F18>; bindings = <&kp END>; };
-        };
-        leader4: leader4 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-            rightup   { sequence = <F17 F16>; bindings = <&kp HOME>; };
-        };
         toJIS: toJIS {
             compatible = "zmk,behavior-hold-tap";
             label = "toJIS";
@@ -241,7 +229,7 @@
 &kp CAPS         &kp Q            &kp W            &kp E            &kp R            &kp T            &kp Y            &kp U            &kp I            &kp O             &kp P  
 &toJIS 1 TAB     &kp A            &mt LEFT_ALT S   &mt LEFT_WIN D   &mt LCTRL F      &kp G            &kp H            &mt RCTRL J      &mt RIGHT_WIN K  &mt RIGHT_ALT L   &lt 7 BSLH
 &mt LSHFT SPACE  &kp Z            &kp X            &kp C            &kp V            &kp B            &kp N            &kp M            &kp COMMA        &kp DOT           &kp UP  
-                 &lt 3 LCTRL      &kp LALT         &lt 2 SPACE      &lt 3 SPACE                                                         &kp LEFT         &kp DOWN          &kp RIGHT
+                 &lt 3 LWIN       &kp LALT         &lt 2 SPACE      &lt 3 SPACE                                                         &kp LEFT         &kp DOWN          &kp RIGHT
             >;
         };
 
@@ -251,7 +239,7 @@
 &kp CAPS         &kp Q            &kp W            &kp E            &kp R            &kp T            &kp Y            &kp U            &kp I            &kp O             &kp P  
 &toJIS 1 TAB     &kp A            &mt LEFT_ALT S   &mt LEFT_WIN D   &mt LCTRL F      &kp G            &kp H            &mt RCTRL J      &mt RIGHT_WIN K  &mt RIGHT_ALT L   &lt 7 BSLH  
 &mt LSHFT SPACE  &kp Z            &kp X            &kp C            &kp V            &kp B            &kp N            &kp M            &kp COMMA        &kp DOT           &kp UP  
-                 &lt 4 LCTRL      &kp LALT         &lt 2 SPACE      &lt 4 SPACE                                                         &kp LEFT         &kp DOWN          &kp RIGHT
+                 &lt 4 LWIN       &kp LALT         &lt 2 SPACE      &lt 4 SPACE                                                         &kp LEFT         &kp DOWN          &kp RIGHT
             >;
         };
 
@@ -280,7 +268,7 @@
             bindings = <
 &kp ESC           &kp N1          &mo2             &kp N3           &kp N4           &kp N5           &mo6             &mo7             &mo8             &mo9              &mo0
 &trans            &trans          &trans           &trans           &trans           &trans           &moMINUS         &moEQUAL         &moLBKT          &moRBKT           &kp INT3  
-&kp ESCAPE        &kp BACKSPACE   &kp DEL          &trans           &trans           &trans           &trans           &kp FSLH         &moSEMI          &moSQT            &trans  
+&trans            &kp BACKSPACE   &kp DEL          &trans           &trans           &trans           &trans           &kp FSLH         &moSEMI          &moSQT            &trans  
                   &trans          &kp ENTER        &kp ENTER        &trans                                                              &trans           &trans            &trans
             >;
         };
