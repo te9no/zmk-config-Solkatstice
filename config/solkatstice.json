@@ -2,7 +2,8 @@
   "id": "Solkatstice",
   "name": "Solkatstice",
   "layouts": {
-    "LAYOUT": {
+    "default_layout": {
+      "name": "default_layout",
       "layout": [
         { "x":     0, "y":    0, "label":      "1" },
         { "x":     1, "y":    0, "label":      "2" },
