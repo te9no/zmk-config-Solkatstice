@@ -34,7 +34,7 @@ layers:
   - COMMA
   - DOT
   - UP
-  - {t: LCTRL, h: Num}
+  - {t: LWIN, h: Num}
   - LALT
   - {t: SPACE, h: Func}
   - {t: SPACE, h: Num}
@@ -75,7 +75,7 @@ layers:
   - COMMA
   - DOT
   - UP
-  - {t: LCTRL, h: NumJIS}
+  - {t: LWIN, h: NumJIS}
   - LALT
   - {t: SPACE, h: Func}
   - {t: SPACE, h: NumJIS}
@@ -187,7 +187,7 @@ layers:
   - {t: RBKT, s: Sft+RBRC}
   - {t: BSLH, s: Sft+BSLH}
   - INT3
-  - ESCAPE
+  - {t: ▽, type: trans}
   - BACKSPACE
   - DEL
   - {t: ▽, type: trans}
@@ -328,3 +328,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [0, 1]
+  k: ESC
