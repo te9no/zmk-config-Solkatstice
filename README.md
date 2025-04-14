@@ -12,6 +12,7 @@
 ・ZMKによる無線接続対応  
 ・40%Qazikat風配列  
 ・OLED、トラックボール、アナログスティック、タッチスライダー搭載  
+![](keymap-drawer/solkatstice.svg)
 
 ## 販売
 たぶん[booth](https://te9no.booth.pm/)で販売  
