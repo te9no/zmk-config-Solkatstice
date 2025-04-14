@@ -1,4 +1,4 @@
-layout: {zmk_keyboard: solkatstice}
+layout: {zmk_keyboard: solkatstice, layout_name: solkatstice_physical_layout}
 layers:
   Def:
   - CAPS
