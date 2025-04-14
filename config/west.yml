@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/urob
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -40,8 +42,11 @@ manifest:
     # - name: zmk-nice-oled
     #   remote: te9no
     #   revision: main
-    - name: zmk-dongle-display-view
-      remote: te9no
+    # - name: zmk-dongle-display-view
+    #   remote: te9no
+    #   revision: main
+    - name: zmk-dongle-display
+      remote: englmaxi
       revision: main
   self:
     path: config
