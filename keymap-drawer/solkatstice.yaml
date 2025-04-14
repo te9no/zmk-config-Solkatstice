@@ -34,7 +34,7 @@ layers:
   - COMMA
   - DOT
   - UP
-  - {t: LWIN, h: Num}
+  - {t: LCTRL, h: Num}
   - LALT
   - {t: SPACE, h: Func}
   - {t: SPACE, h: Num}
@@ -75,7 +75,7 @@ layers:
   - COMMA
   - DOT
   - UP
-  - {t: LWIN, h: NumJIS}
+  - {t: LCTRL, h: NumJIS}
   - LALT
   - {t: SPACE, h: Func}
   - {t: SPACE, h: NumJIS}
