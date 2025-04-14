@@ -1,4 +1,4 @@
-layout: {zmk_keyboard: solkatstice, layout_name: Default}
+layout: {zmk_keyboard: solkatstice, layout_name: solkatstice_physical_layout}
 layers:
   Def:
   - CAPS
@@ -22,7 +22,7 @@ layers:
   - {t: J, h: RCTRL}
   - {t: K, h: RIGHT WIN}
   - {t: L, h: RIGHT ALT}
-  - {t: \, h: BT}
+  - {t: BSLH, h: BT}
   - {t: SPACE, h: LSHFT}
   - Z
   - X
@@ -31,8 +31,8 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
+  - COMMA
+  - DOT
   - UP
   - {t: LWIN, h: Num}
   - LALT
@@ -63,7 +63,7 @@ layers:
   - {t: J, h: RCTRL}
   - {t: K, h: RIGHT WIN}
   - {t: L, h: RIGHT ALT}
-  - {t: \, h: BT}
+  - {t: BSLH, h: BT}
   - {t: SPACE, h: LSHFT}
   - Z
   - X
@@ -72,8 +72,8 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
+  - COMMA
+  - DOT
   - UP
   - {t: LWIN, h: NumJIS}
   - LALT
@@ -83,7 +83,7 @@ layers:
   - DOWN
   - RIGHT
   Func:
-  - '`'
+  - GRAVE
   - PG UP
   - UP
   - PG DN
@@ -94,12 +94,12 @@ layers:
   - F3
   - F4
   - F5
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
   - LEFT
   - DOWN
   - RIGHT
   - END
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
   - F6
   - {t: F7, h: RCTRL}
   - {t: F8, h: RIGHT WIN}
@@ -108,21 +108,21 @@ layers:
   - {t: SPACE, h: LSHFT}
   - BACKSPACE
   - DEL
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F11
   - F12
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ENTER
   - {t: ENTER, type: held}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Num:
   - ESC
   - '1'
@@ -135,196 +135,196 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - '-'
-  - '='
-  - '['
-  - ']'
-  - \
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - MINUS
+  - EQUAL
+  - LBKT
+  - RBKT
+  - BSLH
   - {t: SPACE, h: LSHFT}
   - BACKSPACE
   - DEL
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - /
-  - ;
-  - ''''
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - FSLH
+  - SEMI
+  - SQT
+  - {t: ▽, type: trans}
   - {type: held}
   - ENTER
   - ENTER
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   NumJIS:
   - ESC
   - '1'
-  - {t: '2', s: '['}
+  - {t: '2', s: LBKT}
   - '3'
   - '4'
   - '5'
-  - {t: '6', s: '='}
+  - {t: '6', s: EQUAL}
   - {t: '7', s: Sft+6}
-  - {t: '8', s: Sft+'}
+  - {t: '8', s: Sft+SQT}
   - {t: '9', s: Sft+8}
   - {t: '0', s: Sft+9}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: '-', s: Sft+INT RO}
-  - {t: Sft+-, s: ':'}
-  - {t: ']', s: 'Sft+}'}
-  - {t: \, s: Sft+\}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: MINUS, s: Sft+INT RO}
+  - {t: Sft+MINUS, s: COLON}
+  - {t: RBKT, s: Sft+RBRC}
+  - {t: BSLH, s: Sft+BSLH}
   - INT3
   - ESCAPE
   - BACKSPACE
   - DEL
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - /
-  - {t: ;, s: ''''}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - FSLH
+  - {t: SEMI, s: SQT}
   - {t: Sft+7, s: Sft+2}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - ENTER
   - ENTER
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Mouse:
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '&mkp MB1'
   - '&mkp MB3'
   - '&mkp MB2'
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Scroll:
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '&mkp MB1'
   - '&mkp MB3'
   - '&mkp MB2'
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   BT:
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - BT CLR
   - BT CLR ALL
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
-  - {t: 笆ｽ, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
