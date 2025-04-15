@@ -42,12 +42,12 @@ layers:
   - DOWN
   - RIGHT
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
   JIS:
   - CAPS
   - Q
@@ -90,12 +90,12 @@ layers:
   - DOWN
   - RIGHT
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
   Func:
   - GRAVE
   - PG UP
@@ -138,12 +138,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
   Num:
   - ESC
   - '1'
@@ -186,12 +186,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
   NumJIS:
   - ESC
   - '1'
@@ -234,12 +234,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
   Mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -282,12 +282,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
   Scroll:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -330,12 +330,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
   BT:
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
@@ -378,12 +378,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - F18
-combos:
-- p: [0, 1]
-  k: ESC
+  - '&mF13'
+  - '&mF14'
+  - '&mF15'
+  - '&mF16'
+  - '&mF17'
+  - '&mF18'
