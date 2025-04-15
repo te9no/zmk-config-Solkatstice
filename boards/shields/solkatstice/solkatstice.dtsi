@@ -43,8 +43,7 @@
             kscan = <&kscan2>;
             column-offset = <8>;
         };
-    }
-
+    };
 
     kscan1: kscan_1 {
         compatible = "zmk,kscan-gpio-charlieplex";
