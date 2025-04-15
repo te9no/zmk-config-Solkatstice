@@ -41,7 +41,7 @@
         };
         direct {
             kscan = <&kscan2>;
-            column-offset = <8>;
+            row-offset = <8>;
         };
     };
 
