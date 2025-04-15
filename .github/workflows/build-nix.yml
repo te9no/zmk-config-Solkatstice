@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - config/**
+      - boards/**
       - build.yaml
 
 jobs:
