@@ -41,7 +41,6 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - {t: ▽, type: trans}
   - '&mF13'
   - '&mF14'
   - '&mF15'
@@ -89,7 +88,6 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - {t: ▽, type: trans}
   - '&mF13'
   - '&mF14'
   - '&mF15'
@@ -133,7 +131,6 @@ layers:
   - {t: ▽, type: trans}
   - ENTER
   - {t: ENTER, type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -185,7 +182,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - '&mF13'
   - '&mF14'
   - '&mF15'
@@ -233,7 +229,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - '&mF13'
   - '&mF14'
   - '&mF15'
@@ -273,7 +268,6 @@ layers:
   - '&mkp MB1'
   - '&mkp MB3'
   - '&mkp MB2'
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -329,7 +323,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - '&mF13'
   - '&mF14'
   - '&mF15'
@@ -359,7 +352,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
