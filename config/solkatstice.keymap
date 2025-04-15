@@ -233,7 +233,7 @@
 &toJIS 1 TAB     &kp A            &mt LEFT_ALT S   &mt LEFT_WIN D   &mt LCTRL F      &kp G            &kp H            &mt RCTRL J      &mt RIGHT_WIN K  &mt RIGHT_ALT L   &lt 7 BSLH
 &mt LSHFT SPACE  &kp Z            &kp X            &kp C            &kp V            &kp B            &kp N            &kp M            &kp COMMA        &kp DOT           &kp UP  
                  &lt 3 LWIN       &kp LALT         &lt 2 SPACE      &lt 3 SPACE                                                         &kp LEFT         &kp DOWN          &kp RIGHT
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
 
@@ -244,7 +244,7 @@
 &toJIS 1 TAB     &kp A            &mt LEFT_ALT S   &mt LEFT_WIN D   &mt LCTRL F      &kp G            &kp H            &mt RCTRL J      &mt RIGHT_WIN K  &mt RIGHT_ALT L   &lt 7 BSLH  
 &mt LSHFT SPACE  &kp Z            &kp X            &kp C            &kp V            &kp B            &kp N            &kp M            &kp COMMA        &kp DOT           &kp UP  
                  &lt 4 LWIN       &kp LALT         &lt 2 SPACE      &lt 4 SPACE                                                         &kp LEFT         &kp DOWN          &kp RIGHT
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
 
@@ -255,7 +255,7 @@
 &trans           &kp LEFT         &kp DOWN         &kp RIGHT        &kp END          &trans           &kp F6           &mt RCTRL F7     &mt RIGHT_WIN F8 &mt RIGHT_ALT F9  &kp F10  
 &mt LSHFT SPACE  &kp BACKSPACE    &kp DEL          &trans           &trans           &trans           &kp F11          &kp F12          &trans           &trans            &trans  
                  &trans           &kp ENTER        &kp ENTER        &trans                                                              &trans           &trans            &trans
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
 
@@ -266,7 +266,7 @@
 &trans            &trans          &trans           &trans           &trans           &trans           &kp MINUS        &kp EQUAL        &kp LBKT         &kp RBKT          &kp BSLH  
 &mt LSHFT SPACE   &kp BACKSPACE   &kp DEL          &trans           &trans           &trans           &trans           &kp FSLH         &kp SEMI         &kp SQT           &trans  
                   &trans          &kp ENTER        &kp ENTER        &trans                                                              &trans           &trans            &trans
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
 
@@ -277,7 +277,7 @@
 &trans            &trans          &trans           &trans           &trans           &trans           &moMINUS         &moEQUAL         &moLBKT          &moRBKT           &kp INT3  
 &trans            &kp BACKSPACE   &kp DEL          &trans           &trans           &trans           &trans           &kp FSLH         &moSEMI          &moSQT            &trans  
                   &trans          &kp ENTER        &kp ENTER        &trans                                                              &trans           &trans            &trans
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
 
@@ -288,7 +288,7 @@
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans            &trans  
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &mkp MB1         &mkp MB3         &mkp MB2          &trans  
                  &trans           &trans           &trans           &trans                                                              &trans           &trans            &trans
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
 
@@ -299,7 +299,7 @@
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans            &trans  
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &mkp MB1         &mkp MB3         &mkp MB2          &trans  
                  &trans           &trans           &trans           &trans                                                              &trans           &trans            &trans
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
 
@@ -310,7 +310,7 @@
 &trans           &bt BT_CLR       &bt BT_CLR_ALL   &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans  
 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans  
                  &trans           &trans           &trans           &trans                                                              &trans           &trans           &trans
-                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
+                 &kp F13          &kp F13          &kp F14          &kp F15          &kp F16          &kp F17          &kp F18
             >;
         };
     };
