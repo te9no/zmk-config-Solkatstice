@@ -38,7 +38,7 @@
         compatible = "zmk,kscan-composite";
         matrix {
             kscan = <&kscan1>;
-        }
+        };
         direct {
             kscan = <&kscan2>;
             column-offset = <8>;
