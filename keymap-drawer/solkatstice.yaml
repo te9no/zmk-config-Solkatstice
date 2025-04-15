@@ -41,7 +41,7 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -89,7 +89,7 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -137,7 +137,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -185,7 +185,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -233,7 +233,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -281,7 +281,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -329,7 +329,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -377,7 +377,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F13
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
