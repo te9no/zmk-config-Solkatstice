@@ -63,13 +63,13 @@
     kscan2: kscan2 {
         compatible = "zmk,kscan-gpio-direct";
         input-gpios
-            = <&shifter 14 (GPIO_ACTIVE_LOW)>
-            , <&shifter 8 (GPIO_ACTIVE_LOW)>
+            = <&shifter 8 (GPIO_ACTIVE_LOW)>
             , <&shifter 9 (GPIO_ACTIVE_LOW)>
             , <&shifter 10 (GPIO_ACTIVE_LOW)>
             , <&shifter 11 (GPIO_ACTIVE_LOW)>
             , <&shifter 12 (GPIO_ACTIVE_LOW)>
             , <&shifter 13 (GPIO_ACTIVE_LOW)>
+            , <&shifter 14 (GPIO_ACTIVE_LOW)>
             ;
     };
 };
