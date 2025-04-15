@@ -41,6 +41,12 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
   JIS:
   - CAPS
   - Q
@@ -82,6 +88,12 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
   Func:
   - GRAVE
   - PG UP
@@ -123,6 +135,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
   Num:
   - ESC
   - '1'
@@ -164,6 +182,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
   NumJIS:
   - ESC
   - '1'
@@ -205,6 +229,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
   Mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -246,6 +276,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
   Scroll:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -287,6 +323,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
   BT:
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
@@ -328,6 +370,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
 combos:
 - p: [0, 1]
   k: ESC
