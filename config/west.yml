@@ -15,14 +15,14 @@ manifest:
     - name: englmaxi
       url-base: https://github.com/englmaxi
   projects:
-    - name: zmk
-      remote: zmkfirmware
-    #  revision: main
-      revision: v0.2.1
-      import: app/west.yml
     # - name: zmk
-    #   remote: urob
-    #   revision: v0.2+fix-child-nodes
+    #   remote: zmkfirmware
+    # #  revision: main
+    #   revision: v0.2.1
+    #   import: app/west.yml
+    - name: zmk
+      remote: urob
+      revision: v0.2+fix-child-nodes
       import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
