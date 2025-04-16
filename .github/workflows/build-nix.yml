@@ -33,12 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Download firmware artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: firmware
-          path: firmware
 
       - name: Get last commit message
         id: last_commit_message
