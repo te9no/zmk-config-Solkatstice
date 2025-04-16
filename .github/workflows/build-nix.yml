@@ -32,7 +32,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: ${{ (inputs.amend_commit == true && 2) || 1 }}
+          submodules: recursive
 
       - name: Get last commit message
         id: last_commit_message
@@ -57,6 +61,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: '${{ inputs.artifact_name }}'
-          path: |
-            ${{ join(fromJSON(steps.draw.outputs.artifacts), '
-            ') }}
+          path: 'firmware/*'
