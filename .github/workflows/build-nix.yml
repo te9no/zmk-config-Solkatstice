@@ -17,7 +17,6 @@ on:
       artifact_name:
         description: 'Name of the produced artifact containing SVG and YAML outputs. Ignored if `destination` is `commit`.'
         type: string
-        default: 'drawings'
 
 jobs:
   build:
@@ -37,6 +36,10 @@ jobs:
         with:
           fetch-depth: ${{ (inputs.amend_commit == true && 2) || 1 }}
           submodules: recursive
+          
+      - name: Remove previous firmware files
+        run: |
+          rm -rf firmware/*
 
       - name: Get last commit message
         id: last_commit_message
