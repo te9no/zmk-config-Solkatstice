@@ -40,7 +40,7 @@ jobs:
       - name: Remove previous firmware files
         run: |
           pwd
-          mkdir firmware
+          mkdir -p firmware
           ls -la firmware
           rm -rf firmware/*
           ls -la firmware
