@@ -42,6 +42,7 @@ jobs:
           pwd
           ls -la firmware
           rm -rf firmware/*
+          ls -la firmware
 
       - name: Get last commit message
         id: last_commit_message
