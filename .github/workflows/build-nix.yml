@@ -7,14 +7,6 @@ on:
       - boards/**
       - build.yaml
     inputs:
-      output_folder:
-        description: 'Output folder for SVG and YAML files'
-        type: string
-        default: 'keymap-drawer'
-      commit_message:
-        description: 'Commit message for updated images. Ignored if `amend_commit` is `true`.'
-        type: string
-        default: 'keymap-drawer render'
       amend_commit:
         description: 'Whether to amend the last commit instead of creating a new one. Make sure you understand the implications of rewriting the branch history if you use this option!'
         type: boolean
@@ -26,10 +18,6 @@ on:
         description: 'Name of the produced artifact containing SVG and YAML outputs. Ignored if `destination` is `commit`.'
         type: string
         default: 'drawings'
-    outputs:
-      drawings:
-        description: 'Archive with keymap in YAML and drawing in SVG formats'
-        value: ${{ jobs.draw.outputs.drawings }}
 
 jobs:
   build:
