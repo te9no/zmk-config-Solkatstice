@@ -45,7 +45,7 @@ jobs:
           echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
 
       - name: Download firmware artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
 
       - name: Commit updated images
         uses: stefanzweifel/git-auto-commit-action@v5
