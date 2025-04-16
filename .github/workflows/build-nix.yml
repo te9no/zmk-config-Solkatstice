@@ -59,19 +59,12 @@ jobs:
           echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
 
       - name: Commit updated images
-        if: ( inputs.destination == 'commit' || inputs.destination == 'both' )
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: '${{ inputs.output_folder }}/*.svg ${{ inputs.output_folder }}/*.yaml'
-          # So the previous commit is amended instead of creating a new one when desired
-          # See:
-          # - https://github.com/stefanzweifel/git-auto-commit-action#using---amend-and---no-edit-as-commit-options
-          # - https://github.com/stefanzweifel/git-auto-commit-action/issues/159#issuecomment-845347950
-          # - https://github.com/actions/checkout
-          commit_message: '${{ (inputs.amend_commit == true && steps.last_commit_message.outputs.msg) || inputs.commit_message }}'
-          commit_options: "${{ (inputs.amend_commit == true && '--amend --no-edit') || '' }}"
-          push_options: "${{ (inputs.amend_commit == true && '--force-with-lease') || '' }}"
-          skip_fetch: ${{ inputs.amend_commit == true }}
+          file_pattern: 'firmware/*'
+          commit_message: 'Update firmware files'
+          commit_options: '--no-verify'
+          push_options: '--no-verify'
 
       - name: Artifact upload
         id: artifact-upload-step
