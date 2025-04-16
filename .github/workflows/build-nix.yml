@@ -39,6 +39,8 @@ jobs:
           
       - name: Remove previous firmware files
         run: |
+          pwd
+          ls -la firmware
           rm -rf firmware/*
 
       - name: Get last commit message
