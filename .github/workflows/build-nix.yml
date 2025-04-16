@@ -43,9 +43,8 @@ jobs:
       - name: Download firmware artifacts
         uses: actions/download-artifact@v3
         with:
-          name: firmware
           path: firmware
-          
+
       - name: Commit updated images
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
