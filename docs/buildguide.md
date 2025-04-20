@@ -35,6 +35,21 @@
 ハンダが外れる可能性があるため、導線を引っ張ったり、曲げたりしないように注意してください。  
 ![alt text](img/img01.jpg)
 
+### 修正箇所
+#### ①OLEDのSCL
+黄色枠の部分をパターンカットする必要があります。(黒線で示した二か所)
+![alt text](img/img08.jpg)
+![alt text](image-4.png)
+
+#### ②MCP23S17のCS
+![alt text](image-2.png)
+
+#### ③XW06AのGND
+![alt text](image-1.png)
+
+#### ④PMW3610のCS
+![alt text](image-3.png)
+
 ## スイッチソケットの実装
 ソケットをはんだ付けする。  
 
