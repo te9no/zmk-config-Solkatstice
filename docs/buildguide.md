@@ -39,16 +39,16 @@
 #### ①OLEDのSCL
 黄色枠の部分をパターンカットする必要があります。(黒線で示した二か所)
 ![alt text](img/img08.jpg)
-![alt text](image-4.png)
+![alt text](img/image-4.png)
 
 #### ②MCP23S17のCS
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 #### ③XW06AのGND
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 #### ④PMW3610のCS
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 ## スイッチソケットの実装
 ソケットをはんだ付けする。  
