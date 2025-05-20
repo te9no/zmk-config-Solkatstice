@@ -14,45 +14,16 @@ WHITE='\033[1;37m'
 NC='\033[0m'
 
 # ステータス表示用の関数
-show_status() {
-    local message=$1
-    echo -e "${BLUE}[*]${NC} ${message}"
+status_msg() {
+    echo -e "${BLUE}[*]${NC} $1"
 }
 
-success_status() {
-    local message=$1
-    echo -e "${GREEN}[✓]${NC} ${message}"
+success_msg() {
+    echo -e "${GREEN}[✓]${NC} $1"
 }
 
-error_status() {
-    local message=$1
-    echo -e "${RED}[✗]${NC} ${message}"
-}
-
-# タイプライター効果
-type_text() {
-    local text=$1
-    local delay=${2:-0.02}
-    for ((i=0; i<${#text}; i++)); do
-        echo -n "${text:$i:1}"
-        sleep $delay
-    done
-    echo
-}
-
-# プログレスバー
-show_progress() {
-    local current=$1
-    local total=$2
-    local width=40
-    local percentage=$((current * 100 / total))
-    local completed=$((width * current / total))
-    local remaining=$((width - completed))
-    
-    printf "\r${BLUE}[${CYAN}"
-    for ((i = 0; i < completed; i++)); do printf "█"; done
-    for ((i = 0; i < remaining; i++)); do printf "░"; done
-    printf "${BLUE}] ${WHITE}%d%%${NC}" $percentage
+error_msg() {
+    echo -e "${RED}[✗]${NC} $1" >&2
 }
 
 # ロゴ表示
@@ -74,17 +45,18 @@ EOF
 show_system_info() {
     echo -e "${PURPLE}╔════ SYSTEM INFORMATION ═══════════════════════╗${NC}"
     echo -e "${PURPLE}║${NC} ${CYAN}User:${NC}     $(whoami)"
-    echo -e "${PURPLE}║${NC} ${CYAN}Date:${NC}     $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
+    echo -e "${PURPLE}║${NC} ${CYAN}Date:${NC}     $(date '+%Y-%m-%d %H:%M:%S')"
     echo -e "${PURPLE}║${NC} ${CYAN}System:${NC}   $(uname -sr)"
-    echo -e "${PURPLE}╚═══════════════════════════════════════════════╝${NC}\n"
+    echo -e "${PURPLE}╚═══════════════════════════════════════════════╝${NC}"
+    echo ""
 }
 
 # build.yamlの解析
 parse_build_yaml() {
-    show_status "Analyzing build.yaml configuration..."
+    status_msg "Analyzing build.yaml configuration..."
     
     if [ ! -f "build.yaml" ]; then
-        error_status "build.yaml not found in current directory"
+        error_msg "build.yaml not found in current directory"
         exit 1
     fi
 
@@ -114,26 +86,26 @@ parse_build_yaml() {
         fi
     done
 
-    success_status "Configuration loaded successfully"
-    type_text "Shield Base: $SHIELD_BASE"
-    type_text "Parts: ${PARTS[*]}"
-    type_text "Snippets: ${SNIPPETS[*]:-zmk-usb-logging}"
+    success_msg "Configuration loaded successfully"
+    echo "Shield Base: $SHIELD_BASE"
+    echo "Parts: ${PARTS[*]}"
+    echo "Snippets: ${SNIPPETS[*]:-zmk-usb-logging}"
 }
 
 # Nixのチェック
 check_nix() {
-    show_status "Checking Nix installation..."
+    status_msg "Checking Nix installation..."
     if ! command -v nix &> /dev/null; then
-        error_status "Nix not found. Installing..."
+        error_msg "Nix not found. Installing..."
         curl -L https://nixos.org/nix/install | sh
         . ~/.nix-profile/etc/profile.d/nix.sh
     fi
-    success_status "Nix installation verified"
+    success_msg "Nix installation verified"
 }
 
 # flake.nixの生成
 generate_flake_nix() {
-    show_status "Generating flake.nix..."
+    status_msg "Generating flake.nix..."
     cat > flake.nix << EOF
 {
   inputs = {
@@ -176,7 +148,7 @@ generate_flake_nix() {
   };
 }
 EOF
-    success_status "flake.nix generated"
+    success_msg "flake.nix generated"
 }
 
 # メイン処理
@@ -184,55 +156,42 @@ main() {
     clear
     display_logo
     show_system_info
-    
-    total_steps=5
-    current_step=0
 
     # Nixチェック
-    ((current_step++))
-    show_progress $current_step $total_steps
     check_nix
 
     # build.yaml解析
-    ((current_step++))
-    show_progress $current_step $total_steps
     parse_build_yaml
 
     # ZMK-Nixテンプレート初期化
-    ((current_step++))
-    show_progress $current_step $total_steps
-    show_status "Initializing ZMK-Nix template..."
+    status_msg "Initializing ZMK-Nix template..."
     nix flake init --template github:lilyinstarlight/zmk-nix
-    success_status "ZMK-Nix template initialized"
+    success_msg "ZMK-Nix template initialized"
 
     # flake.nix生成
-    ((current_step++))
-    show_progress $current_step $total_steps
     generate_flake_nix
 
     # .gitignoreの更新
-    show_status "Updating .gitignore..."
+    status_msg "Updating .gitignore..."
     {
         echo "result"
         echo ".direnv"
         echo ".envrc"
     } >> .gitignore
     sort -u .gitignore -o .gitignore
-    success_status ".gitignore updated"
+    success_msg ".gitignore updated"
 
     # ビルド実行
-    ((current_step++))
-    show_progress $current_step $total_steps
-    show_status "Building firmware..."
+    status_msg "Building firmware..."
     if ! nix build 2> build_error.log; then
         error_output=$(cat build_error.log)
         if echo "$error_output" | grep -q "hash mismatch"; then
-            show_status "Hash mismatch detected. Attempting to fix..."
+            status_msg "Hash mismatch detected. Attempting to fix..."
             new_hash=$(echo "$error_output" | grep "got:" | awk '{print $2}')
             if [ ! -z "$new_hash" ]; then
                 sed -i "s/zephyrDepsHash = \".*\"/zephyrDepsHash = \"$new_hash\"/" flake.nix
-                type_text "Updated hash: $new_hash"
-                show_status "Retrying build..."
+                echo "Updated hash: $new_hash"
+                status_msg "Retrying build..."
                 nix build
             fi
         else
@@ -241,13 +200,13 @@ main() {
         fi
     fi
     rm -f build_error.log
-    success_status "Firmware built successfully"
+    success_msg "Firmware built successfully"
 
     echo -e "\n${GREEN}┌────────────────────────────────────────┐${NC}"
     echo -e "${GREEN}│${NC}     🎉 Setup Complete! 🎉           ${GREEN}│${NC}"
     echo -e "${GREEN}└────────────────────────────────────────┘${NC}\n"
 
-    type_text "Build artifacts location: ./result/"
+    echo "Build artifacts location: ./result/"
     echo -e "\n${CYAN}Next steps:${NC}"
     echo -e "1. Configure your keymap in ${WHITE}config/${NC} directory"
     echo -e "2. Commit and push your changes"
