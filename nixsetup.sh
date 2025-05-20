@@ -1,10 +1,7 @@
 #!/bin/bash
-
 # スクリプト名: setup-zmk-nix.sh
-
 # エラーハンドリング
 set -e
-
 # 色の定義
 GREEN='\033[0;32m'
 BLUE='\033[0;36m'
@@ -14,7 +11,6 @@ CYAN='\033[1;36m'
 PURPLE='\033[0;35m'
 WHITE='\033[1;37m'
 NC='\033[0m'
-
 # リポジトリ情報
 REPO_URL="https://github.com/te9no/zmk-config-roBa"
 REPO_OWNER="te9no"
